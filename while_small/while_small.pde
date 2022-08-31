@@ -14,6 +14,7 @@ void draw() {
   int xn = x;
   int yn = y;
   int orn = -or;
+  
   while(xn > 0) {
     strokeWeight(4);
     stroke(color((float)xn / (float)x * 255, (float)(yn - 200) / 200.0 * 255 , (1.0 - (float)xn / (float)x) * 255));
@@ -23,6 +24,9 @@ void draw() {
     yn = yn + orn * speed;
     
   }
+  fill(color(255,255,255));
+  noStroke();
+  circle(x, y, 15);
   y = y + speed * or;
 
   if(y >= 400 || y <= 200) {
